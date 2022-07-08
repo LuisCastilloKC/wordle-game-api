@@ -14,4 +14,10 @@ class Api::V1::WordleWordsController < ApplicationController
             render json: wordle_word.errors, status: :unprocessable_entity
         end
     end
+
+    private
+
+    def wordle_word_params
+        params.require(:wordle_word).permit(:words)
+    end
 end
