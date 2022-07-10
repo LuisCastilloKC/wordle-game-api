@@ -1,0 +1,3 @@
+class WordleWords < ApplicationRecord
+
+end
